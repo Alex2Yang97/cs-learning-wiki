@@ -1,7 +1,5 @@
-site_name: My Knowledge Wiki
-site_description: A personal knowledge base.
-# After you create the GitHub repo, set these to your real values.
-# site_url drives the canonical URL; repo_url adds the "edit / view source" links.
+site_name: CS Learning Wiki
+site_description: A personal knowledge base on Python, System Design, AWS, AI Agents, and more.
 site_url: https://Alex2Yang97.github.io/cs-learning-wiki/
 repo_url: https://github.com/Alex2Yang97/cs-learning-wiki
 repo_name: Alex2Yang97/cs-learning-wiki
@@ -13,6 +11,8 @@ theme:
     - navigation.tracking    # URL updates with the active anchor
     - navigation.top         # back-to-top button
     - navigation.footer      # prev/next links
+    - navigation.indexes     # a section's index.md becomes its landing page
+    - navigation.sections    # render top-level topics as grouped sections
     - search.suggest         # autocomplete in search
     - search.highlight       # highlight matches on the page
     - content.code.copy      # copy button on code blocks
@@ -36,20 +36,46 @@ theme:
 
 markdown_extensions:
   - admonition              # note/warning/tip callout boxes
+  - attr_list               # needed for grid cards / button styling
+  - md_in_html              # needed for grid cards
   - pymdownx.details        # collapsible callouts
-  - pymdownx.superfences    # nested code blocks + diagrams
+  - pymdownx.emoji:         # :material-xxx: icon shortcodes
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
   - pymdownx.tasklist:
       custom_checkbox: true
+  - tables
   - toc:
       permalink: true       # clickable header anchors
+  # superfences powers both nested code blocks and Mermaid diagrams
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 
 plugins:
   - search
+  - tags                     # tag index is rendered wherever the
+                             # <!-- material/tags --> marker appears (docs/tags.md)
 
-# Sidebar navigation. Add pages here as you create them under docs/.
+# Sidebar navigation.
+# To add a NEW ARTICLE: create the .md file under the topic folder, then add a
+#   "  - Title: <folder>/<file>.md" line under that topic below.
+# To add a NEW TOPIC: create docs/<new-topic>/index.md, then add a new top-level
+#   section here mirroring the ones below.
 nav:
   - Home: index.md
-  - Getting Started: getting-started.md
+  - Python Fundamentals:
+      - python-fundamentals/index.md
+      - Variables and Types: python-fundamentals/variables-and-types.md
+  - System Design:
+      - system-design/index.md
+  - AWS:
+      - aws/index.md
+  - AI Agent:
+      - ai-agent/index.md
+  - Tags: tags.md
