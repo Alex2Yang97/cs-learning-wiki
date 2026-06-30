@@ -71,7 +71,8 @@ nav:
   - Home: index.md
   - Python Fundamentals:
       - python-fundamentals/index.md
-      - Variables and Types: python-fundamentals/variables-and-types.md
+      - "Concurrency · Intro": python-fundamentals/concurrency-01-intro.md
+      - "Concurrency · Threads vs Asyncio": python-fundamentals/concurrency-02-threads-vs-asyncio.md
   - System Design:
       - system-design/index.md
   - AWS:

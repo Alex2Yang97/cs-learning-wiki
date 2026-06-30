@@ -35,7 +35,7 @@ docs/
 ├── tags.md                     # auto-generated tag index
 ├── python-fundamentals/
 │   ├── index.md                # topic overview
-│   └── variables-and-types.md  # an article
+│   └── concurrency-01-intro.md # an article
 ├── system-design/
 │   └── index.md
 ├── aws/
@@ -60,7 +60,7 @@ docs/
 
 Text, tables, fenced **code** (with syntax highlighting + copy button),
 **diagrams** via Mermaid, and **callouts** via admonitions — see the
-[template article](python-fundamentals/variables-and-types.md) for live examples.
+[Concurrency · Intro](python-fundamentals/concurrency-01-intro.md) for live examples.
 
 ## Edit locally
 
