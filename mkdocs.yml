@@ -1,0 +1,55 @@
+site_name: My Knowledge Wiki
+site_description: A personal knowledge base.
+# After you create the GitHub repo, set these to your real values.
+# site_url drives the canonical URL; repo_url adds the "edit / view source" links.
+site_url: https://Alex2Yang97.github.io/cs-learning-wiki/
+repo_url: https://github.com/Alex2Yang97/cs-learning-wiki
+repo_name: Alex2Yang97/cs-learning-wiki
+
+theme:
+  name: material
+  features:
+    - navigation.instant     # SPA-style fast page loads
+    - navigation.tracking    # URL updates with the active anchor
+    - navigation.top         # back-to-top button
+    - navigation.footer      # prev/next links
+    - search.suggest         # autocomplete in search
+    - search.highlight       # highlight matches on the page
+    - content.code.copy      # copy button on code blocks
+    - toc.follow
+  palette:
+    # Light/dark toggle.
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition              # note/warning/tip callout boxes
+  - pymdownx.details        # collapsible callouts
+  - pymdownx.superfences    # nested code blocks + diagrams
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - toc:
+      permalink: true       # clickable header anchors
+
+plugins:
+  - search
+
+# Sidebar navigation. Add pages here as you create them under docs/.
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
