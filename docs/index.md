@@ -18,6 +18,10 @@ My personal knowledge base. Browse a topic from the sidebar or jump in below.
 
     Core services, patterns, and hands-on notes.
 
+- :material-rocket-launch: **[Deployment & Ops](deployment/index.md)**
+
+    Shipping services to production — CI/CD, IaC, containers, and observability.
+
 - :material-robot: **[AI Agent](ai-agent/index.md)**
 
     LLM-powered agents — tools, memory, and orchestration.
@@ -39,6 +43,8 @@ docs/
 ├── system-design/
 │   └── index.md
 ├── aws/
+│   └── index.md
+├── deployment/
 │   └── index.md
 └── ai-agent/
     └── index.md

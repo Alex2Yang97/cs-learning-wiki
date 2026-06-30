@@ -5,5 +5,6 @@ patterns, and hands-on notes.
 
 ## Articles
 
-*No articles yet.* Create a `.md` file in this folder, link it here, and
-register it under **AWS** in `mkdocs.yml`.
+- [S3 · Intro](s3-01-intro.md) — object storage basics (bucket/object/key),
+  common features, and how backends/clients interact with S3 (proxy vs
+  presigned URL vs temporary credentials)

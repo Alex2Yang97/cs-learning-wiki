@@ -77,6 +77,9 @@ nav:
       - system-design/index.md
   - AWS:
       - aws/index.md
+      - "S3 · Intro": aws/s3-01-intro.md
+  - Deployment & Ops:
+      - deployment/index.md
   - AI Agent:
       - ai-agent/index.md
   - Tags: tags.md
